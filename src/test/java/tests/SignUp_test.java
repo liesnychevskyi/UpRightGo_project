@@ -1,11 +1,10 @@
 package tests;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
-import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -13,16 +12,16 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import pages.SignUp_page;
+import utilities.CapScreenMethods;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-public class SignUp_test {
+public class SignUp_test extends CapScreenMethods
+{
 
     //Data test
 //=============================================================================||
@@ -41,7 +40,6 @@ public class SignUp_test {
     {
         DesiredCapabilities cap = new DesiredCapabilities();
         cap.setCapability("platform", "Android 7.0");
-        //cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Android Emulator");
         cap.setCapability(MobileCapabilityType.DEVICE_NAME, "Sumsung Galaxy 6S");
         cap.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "100"); //Waiting 100 seconds before it will be closed
         cap.setCapability(MobileCapabilityType.APP, fs.getAbsolutePath());
@@ -55,23 +53,27 @@ public class SignUp_test {
             e.printStackTrace();
         }
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
     }
 
     @Test
     public void singUpTest() throws IOException
     {
-        SignUp_page singupPage = new SignUp_page(driver);
-        singupPage.tapSignButton_1();
-        singupPage.typeFirstName(name);
-        singupPage.typeLastName(lastName);
-        singupPage.typeEmail(email);
-        singupPage.typePassword(password);
-        singupPage.getScreenshot_1(driver);
-        singupPage.tapEyeButton();
-        singupPage.getScreenshot_1(driver);
+        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        SignUp_page signupPage = new SignUp_page(driver);
+        signupPage.checkLabel();
+        signupPage.checkVerticalBar();
+        signupPage.tapSignButton_1();
+        signupPage.typeFirstName(name);
+        signupPage.typeLastName(lastName);
+        signupPage.typeEmail(email);
+        signupPage.typePassword(password);
+        signupPage.getScreenshot_1(driver);
+        signupPage.tapEyeButton();
+        signupPage.getScreenshot_1(driver);
         driver.hideKeyboard();
-        singupPage.tapSignButton_2();
-        singupPage.registrationIsValid(nameOfregister);
+        signupPage.tapSignButton_2();
+        signupPage.registrationIsValid(nameOfregister);
     }
 
     @AfterTest
@@ -81,6 +83,15 @@ public class SignUp_test {
         System.out.println("Driver QUIT --- OK");
     }
 
+//=======================================================================================||
+
+//=======================================================================================||
+
 }
+//http://qaru.site/questions/1248917/how-to-compare-screenshots-to-a-reference-image-using-appium
+//https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_feature2d/py_matcher/py_matcher.html
+//http://dzaiats.github.io/appium-sikuli-driver/
 //temple email
 //https://temp-mail.org/en/
+//https://www.ibm.com/developerworks/community/blogs/mobileblog/entry/mirroring_an_android_device_screen_onto_your_desktop?lang=en
+
