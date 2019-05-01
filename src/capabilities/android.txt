@@ -1,0 +1,4 @@
+platformName=Android 7.0
+deviceName=Samsung 6s
+newCommandTimeOut=100
+app=C:\Users\liesn\IdeaProjects\UpRight_Technologies\src\test\java\app\UprightGO.apk

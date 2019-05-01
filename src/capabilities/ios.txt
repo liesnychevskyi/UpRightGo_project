@@ -1,0 +1,5 @@
+automationName=XCUITest
+deviceName=iPhone X (11.2)
+UDID=0F467540
+app=/src\test\java\app
+platformName=iOS

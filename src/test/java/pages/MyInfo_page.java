@@ -19,19 +19,19 @@ public class MyInfo_page
 //Elements
 //===================================================================||
 
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/shop_upright")
-    public WebElement ORDER_HERE_BATTON;
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/exit_my_info")
+    public WebElement EXIT_X_ICON_FROM_MY_INFO;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='LOGIN']")
-    public WebElement LOGIN_INSIDE_SIGNUP;
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/toolbar_title")
+    public WebElement MY_INFO_TEXT;
 
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/welcome_legal2")
+    @AndroidFindBy(id = "")
     public WebElement PRIVACY_POLICY_BUTTON;
 
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/welcome_legal1")
+    @AndroidFindBy(id = "")
     public WebElement TERMS_BUTTON;
 
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='&']")
+    @AndroidFindBy(xpath = "")
     public WebElement AND_SIGN;
 
     @AndroidFindBy(xpath = "//android.widget.TextView[@text='UPRIGHT GO?']")

@@ -29,10 +29,16 @@ public class Login_page
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/connect_button")
     public WebElement LOGIN_BUTTON_2;
 
+    @AndroidFindBy(xpath = "//android.view.View[@elementId='6']")
+    public WebElement HORIZONTAL_BAR;
+
+    @AndroidFindBy(xpath = "//android.view.View[@text='Don't have an account?']")
+    public WebElement DONT_HAVE_AN_ACCOUNT_TEXT;
+
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/toolbar_title")
     public WebElement LOGIN_TITLE;
 
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/button_back")
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/button1")
     public WebElement BACK_BUTTON_ARROW;
 
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/show_pw")
@@ -42,15 +48,37 @@ public class Login_page
     public WebElement QUESSION_BUTTON;
 
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/forgot_password_textview")
-    public WebElement FORGOT_PASSWORD;
+    public WebElement FORGOT_PASSWORD_LINK;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/have_account")
+    public WebElement SIGN_UP_LINK;
 
 
-    @AndroidFindBy(xpath = "//android.widget.LinearLayout[@elementId='15']")
-    public WebElement CONNECTING_WINDOW;
-
+//---------------------------------------------------------------------||
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/toolbar_title")
     public WebElement TURN_ON_TITLE;
 
+    @AndroidFindBy(xpath = "//android.widget.Button[@instance='1']")
+    public WebElement QUESSION_BUTTON_2;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/button1")
+    public WebElement BACK_BUTTON_ARROW_2;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Let's start using your']")
+    public WebElement LETS_STAR_USING_YOUR_TEXT;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='UPRIGHT GO']")
+    public WebElement UPRIGHT_GO_TEXT;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='.']")
+    public WebElement DOT_TEXT;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/textView")
+    public WebElement FIRST_PRESS_THE_POWER_BUTTON_TEXT;
+
+    @AndroidFindBy(xpath = "//android.view.View[@resource-id='com.uprightpose.upright_go:id/gif_view']")
+    public WebElement ANIMATION_HAND ;
+//---------------------------------------------------------------------||
 //android.widget.Button[@index='0']
 //android.widget.Button[@text='some text']
 //android.widget.Button[@text='some text' and @index='0']
@@ -169,6 +197,38 @@ public void taploginButton_2()
         {
             System.out.println("Passed we are LOGIN SUCCESSFUL");
         }
+        else
+        {
+            System.out.println("Test Failed ERROR!");
+        }
     }
 //======================================================================||
+public void checkHorizontalBarIsPresent()
+{
+    boolean HorBar = HORIZONTAL_BAR.isDisplayed();
+    if(HorBar = true)
+    {
+        System.out.println("Passed we are Horizontal bar is displayed --- OK");
+    }
+    else
+    {
+        System.out.println("Horizontal bar is not visible ERROR!!!");
+    }
+}
+
+//----------------------------------------------------------------------||
+public void Dont_have_an_account_text_is_present()
+{
+    boolean DHA_account = HORIZONTAL_BAR.isDisplayed();
+    if(DHA_account = true)
+    {
+        System.out.println("Dont have an account is present --- OK");
+    }
+    else
+    {
+        System.out.println("Dont have an account is not present ERROR!!!");
+    }
+}
+
+//----------------------------------------------------------------------||
 }
