@@ -24,4 +24,5 @@ public class testSingUp extends BASE_class_4
     }
 //video
 //https://blog.testproject.io/2018/07/31/page-object-appium-tests-tutorial-video/
-
+//https://opencv.org/ image recognition
+//https://cloud.bitbar.com/#user/subscriptions?fromBuy -- cloud

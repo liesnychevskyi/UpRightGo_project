@@ -25,67 +25,101 @@ public class MyInfo_page
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/toolbar_title")
     public WebElement MY_INFO_TEXT;
 
-    @AndroidFindBy(id = "")
-    public WebElement PRIVACY_POLICY_BUTTON;
-
-    @AndroidFindBy(id = "")
-    public WebElement TERMS_BUTTON;
-
-    @AndroidFindBy(xpath = "")
-    public WebElement AND_SIGN;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='UPRIGHT GO?']")
-    public WebElement UPRIGHTGO_TEXT;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Don't have an']")
-    public WebElement DONT_HAVE_AN_TEXT;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='By signing up, I accept the']")
-    public WebElement I_ACCEPT_TEXT;
-
-    @AndroidFindBy(xpath = "//android.widget.TextView[@text='Already have an account?'")
-    public WebElement ALREADY_HAVE_AN_ACCOUNT_TEXT;
-
-    @AndroidFindBy(className = "android.widget.Button")
-    public WebElement VERTICAL_BAR_2;
-
-    @AndroidFindBy(className = "android.widget.Button")
-    public WebElement QUESTION_BATTON;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/button_back")
-    public WebElement BACK_ARROW;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/toolbar_title")
-    public WebElement SIGN_UP_LABLE;
-
-    @AndroidFindBy(className = "android.view.View")
-    public WebElement VERTICAL_BAR_1;
-
-    @AndroidFindBy(xpath = "//android.view.View[contains(@resource-id,'com.uprightpose.upright_go:id/gif_view')]")
-    public WebElement UPRIGHTGO_LABEL;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/signup")
-    public WebElement SING_UP_BUTTON_1;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/firstname_edittext")
-    public WebElement FIRST_NAME;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/lasttname_edittext")
-    public WebElement LAST_NAME;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/email_edittext")
-    public WebElement EMAIL;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/email_password_edittext")
-    public WebElement PASSWORD;
-
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/connect_button")
-    public WebElement SING_UP_BUTTON_2;
+    @AndroidFindBy(xpath = "//android.widget.Button[@instance='0' and @index='0']")
+    public WebElement QUESTION_BUTTON;
 
     @AndroidFindBy(id = "com.uprightpose.upright_go:id/user_details_title")
-    public WebElement REGISTER_NAME;
+    public WebElement HI_NAME_OF_VISITOR;
 
-    @AndroidFindBy(id = "com.uprightpose.upright_go:id/show_pw")
-    public WebElement EYE_PASSWORD;
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/user_details_text")
+    public WebElement HELP_AS_COSTOMIZE_YOUR_TRAINING_PLAN_TEXT;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/female")
+    public WebElement FEMALE_ICON;
+
+    @AndroidFindBy(xpath = "//android.widget.TextView[@text='OR']")
+    public WebElement OR_TEXT;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/male")
+    public WebElement MALE_ICON;
+
+    @AndroidFindBy(xpath = "//android.view.View[@index='3']")
+    public WebElement HORIZONTAL_BAR_1;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/metric_system")
+    public WebElement KG_CM;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/user_details_units_switch")
+    public WebElement SWITCH_KG_CM__IL_INCH;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/imperial_system")
+    public WebElement LB_INCH;
+
+//---------------------------------------------------------------------------//
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/weight_button")
+    public WebElement WAIGHT_BATTON;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/weight_textview")
+    public WebElement WEIGHT_BAR;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/customFontView3")
+    public WebElement WEIGHT_TEXT;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/picker_title_textview")
+    public WebElement WEIGHT_TEXT_2;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/metric")
+    public WebElement lb_or_kg;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/metric")
+    public WebElement WEIGHT_SET_BATTON;
+
+    @AndroidFindBy(id = "")
+    public WebElement WEIGHT_PICKER_WHEEL;
+
+//---------------------------------------------------------------------------//
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/height_button")
+    public WebElement HEIGHT_BATTON;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/height_textview")
+    public WebElement HEIGHT_BAR;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/user_details_text_title")
+    public WebElement HEIGHT_TEXT;
+//--------------------------------------------------------------------------//
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/age_button")
+    public WebElement AGE_BATTON;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/age_textview")
+    public WebElement AGE_BAR;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/user_details_age_text_title")
+    public WebElement AGE_TEXT;
+//--------------------------------------------------------------------------//
+    @AndroidFindBy(xpath = "//android.view.View[@index='2']")
+    public WebElement HORIZONTAL_BAR_2;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/question1_text")
+    public WebElement How_many_hours_do_you_sit_daily_text;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/option_1")
+    public WebElement _0_3_hours;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/option_2")
+    public WebElement _3_5_hours;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/option_3")
+    public WebElement _5_10_hours;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/option_4")
+    public WebElement _10_hours;
+
+    @AndroidFindBy(xpath = "//android.view.View[@index='2']")
+    public WebElement HORIZONTAL_BAR_3;
+
+    @AndroidFindBy(id = "com.uprightpose.upright_go:id/question2_text")
+    public WebElement How_much_do_you_suffer_from_back_pain_text;
+
+
 
 }
